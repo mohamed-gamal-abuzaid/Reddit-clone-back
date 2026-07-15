@@ -1,4 +1,4 @@
-package com.redditclone.reddit_backend.model;
+package com.redditclone.reddit_backend.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

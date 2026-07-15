@@ -1,7 +1,7 @@
 package com.redditclone.reddit_backend.repository;
 
 
-import com.redditclone.reddit_backend.model.User;
+import com.redditclone.reddit_backend.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
