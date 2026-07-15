@@ -1,8 +1,8 @@
 package com.redditclone.reddit_backend.security;
 
-import com.redditclone.reddit_backend.model.Role;
-import com.redditclone.reddit_backend.model.RefreshToken;
-import com.redditclone.reddit_backend.model.User;
+import com.redditclone.reddit_backend.entity.Role;
+import com.redditclone.reddit_backend.entity.RefreshToken;
+import com.redditclone.reddit_backend.entity.User;
 import com.redditclone.reddit_backend.repository.RefreshTokenRepository;
 import com.redditclone.reddit_backend.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;

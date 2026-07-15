@@ -1,4 +1,4 @@
-package com.redditclone.reddit_backend.model;
+package com.redditclone.reddit_backend.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -54,6 +54,10 @@ public class User implements UserDetails {
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
+
+
+    @OneToMany(mappedBy = "author")
+    private List<Post> posts;
 
     // UserDetails methods
     @Override

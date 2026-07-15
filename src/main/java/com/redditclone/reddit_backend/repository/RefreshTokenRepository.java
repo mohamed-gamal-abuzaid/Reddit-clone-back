@@ -1,7 +1,7 @@
 package com.redditclone.reddit_backend.repository;
 
-import com.redditclone.reddit_backend.model.RefreshToken;
-import com.redditclone.reddit_backend.model.User;
+import com.redditclone.reddit_backend.entity.RefreshToken;
+import com.redditclone.reddit_backend.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
