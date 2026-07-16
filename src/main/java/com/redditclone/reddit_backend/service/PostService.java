@@ -63,7 +63,7 @@ public class PostService {
     }
 
 
-    public List<PostResponse> listPosts() {
+    public List<PostResponse> listAllPosts() {
         List<Post> posts = postRepository.findAll();
 
         if (posts.isEmpty()) {
@@ -76,7 +76,7 @@ public class PostService {
     }
 
 
-    public List<PostResponse> listPostsByUser(String username) {
+    public List<PostResponse> listAllPostsByUser(String username) {
         List<Post> posts = postRepository.findByAuthor_Username(username);
 
         if (posts.isEmpty()) {
