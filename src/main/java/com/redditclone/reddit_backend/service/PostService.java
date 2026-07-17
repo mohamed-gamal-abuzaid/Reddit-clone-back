@@ -1,7 +1,7 @@
 package com.redditclone.reddit_backend.service;
 
-import com.redditclone.reddit_backend.dtos.CreatePostRequest;
-import com.redditclone.reddit_backend.dtos.PostResponse;
+import com.redditclone.reddit_backend.dtos.Post.CreatePostRequest;
+import com.redditclone.reddit_backend.dtos.Post.PostResponse;
 import com.redditclone.reddit_backend.entity.Post;
 import com.redditclone.reddit_backend.entity.User;
 import com.redditclone.reddit_backend.exception.ResourceNotFoundException;

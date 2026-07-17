@@ -1,6 +1,5 @@
-package com.redditclone.reddit_backend.dtos;
+package com.redditclone.reddit_backend.dtos.Post;
 
-import com.redditclone.reddit_backend.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

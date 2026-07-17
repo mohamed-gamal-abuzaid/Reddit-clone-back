@@ -1,6 +1,8 @@
 package com.redditclone.reddit_backend.controller;
 
-import com.redditclone.reddit_backend.dtos.*;
+import com.redditclone.reddit_backend.dtos.Auth.AuthResponse;
+import com.redditclone.reddit_backend.dtos.Auth.LoginRequest;
+import com.redditclone.reddit_backend.dtos.Auth.RegisterRequest;
 import com.redditclone.reddit_backend.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
