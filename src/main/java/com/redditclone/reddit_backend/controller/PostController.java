@@ -1,7 +1,7 @@
 package com.redditclone.reddit_backend.controller;
 
-import com.redditclone.reddit_backend.dtos.CreatePostRequest;
-import com.redditclone.reddit_backend.dtos.PostResponse;
+import com.redditclone.reddit_backend.dtos.Post.CreatePostRequest;
+import com.redditclone.reddit_backend.dtos.Post.PostResponse;
 import com.redditclone.reddit_backend.service.PostService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;

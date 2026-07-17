@@ -59,6 +59,9 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "author")
     private List<Post> posts;
 
+    @OneToMany(mappedBy = "author")
+    private List<Comment> comments;
+
     // UserDetails methods
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

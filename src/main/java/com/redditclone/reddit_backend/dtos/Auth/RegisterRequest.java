@@ -1,4 +1,4 @@
-package com.redditclone.reddit_backend.dtos;
+package com.redditclone.reddit_backend.dtos.Auth;
 
 import jakarta.validation.constraints.*;
 import lombok.Data;

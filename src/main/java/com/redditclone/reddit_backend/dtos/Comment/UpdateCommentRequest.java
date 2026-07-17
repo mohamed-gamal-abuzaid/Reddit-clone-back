@@ -1,13 +1,11 @@
-package com.redditclone.reddit_backend.dtos;
+package com.redditclone.reddit_backend.dtos.Comment;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class CreatePostRequest {
+public class UpdateCommentRequest {
 
-    @NotBlank
-    private String title;
 
     @NotBlank
     private String body;

@@ -1,6 +1,8 @@
 package com.redditclone.reddit_backend.service;
 
-import com.redditclone.reddit_backend.dtos.*;
+import com.redditclone.reddit_backend.dtos.Auth.AuthResponse;
+import com.redditclone.reddit_backend.dtos.Auth.LoginRequest;
+import com.redditclone.reddit_backend.dtos.Auth.RegisterRequest;
 import com.redditclone.reddit_backend.entity.*;
 import com.redditclone.reddit_backend.repository.*;
 import com.redditclone.reddit_backend.security.JwtService;
