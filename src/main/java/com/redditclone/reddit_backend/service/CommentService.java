@@ -83,6 +83,16 @@ public class CommentService {
                 .toList();
     }
 
+
+    public List<CommentResponse> getUserComments(Long userId) {
+
+        User currentUser = SecurityUtils.getCurrentUser();
+        List<Comment> allComments = commentRepository.findByAuthor(currentUser);
+        return allComments.stream()
+                .map(this::mapToCommentResponse)
+                .toList();
+    }
+
     @Transactional
     public CommentResponse updateComment(Long commentId, CreateCommentRequest commentRequest) {
 
@@ -134,5 +144,4 @@ public class CommentService {
                 .updatedAt(comment.getUpdatedAt())
                 .build();
     }
-
 }

@@ -56,7 +56,7 @@ public class PostController {
             description = "Retrieves a list of all posts.")
     @GetMapping
     public ResponseEntity<List<PostResponse>> getAllPosts() {
-        return ResponseEntity.ok(postService.listAllPosts());
+        return ResponseEntity.ok(postService.getAllPosts());
     }
 
 
@@ -66,7 +66,7 @@ public class PostController {
     @GetMapping("/user/{username}")
     public ResponseEntity<List<PostResponse>> getPostsByUsername(
             @PathVariable String username) {
-        return ResponseEntity.ok(postService.listAllPostsByUser(username));
+        return ResponseEntity.ok(postService.getAllPostsByUser(username));
     }
 
     @Operation(
