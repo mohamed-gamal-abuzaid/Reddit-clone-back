@@ -43,5 +43,8 @@ public class Post {
     @OneToMany(mappedBy = "post")
     private List<Comment> comments;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "subreddit_id", nullable = false)
+    private Subreddit subreddit;
 
 }
