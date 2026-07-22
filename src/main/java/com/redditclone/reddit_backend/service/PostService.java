@@ -112,7 +112,7 @@ public class PostService {
                 .id(post.getId())
                 .title(post.getTitle())
                 .body(post.getBody())
-                .author(post.getAuthor().getActualUsername())
+                .author(post.getAuthor().getUsername())
                 .voteScore(post.getVoteScore())
                 .commentsCount(post.getCommentCount())
                 .createdAt(post.getCreatedAt())

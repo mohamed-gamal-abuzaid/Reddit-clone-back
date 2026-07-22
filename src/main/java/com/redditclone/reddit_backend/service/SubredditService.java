@@ -19,6 +19,7 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -160,10 +161,13 @@ public class SubredditService {
             throw new BadRequestException("You are not a member of this subreddit");
         }
 
+        member.setLeavedAt(LocalDateTime.now());
+
         subreddit.setMembersCount(
                 subreddit.getMembersCount() - 1
         );
-        subredditMemberRepository.delete(member);
+
+        subredditMemberRepository.save(member);
         subredditRepository.save(subreddit);
     }
 
@@ -171,7 +175,7 @@ public class SubredditService {
 
     public List<SubredditMemberResponse> getMembers(Long subredditId) {
         Subreddit subreddit = getSubredditOrThrow(subredditId);
-        List<SubredditMember> members = subredditMemberRepository.findBySubreddit(subreddit);
+        List<SubredditMember> members = subredditMemberRepository.findBySubredditAndLeavedAtIsNull(subreddit);
         return members.stream()
                 .map(this::mapToMemberResponse)
                 .toList();
@@ -241,8 +245,9 @@ public class SubredditService {
             throw new BadRequestException("This member does not belong to this subreddit");
         }
 
+        targetMember.setLeavedAt(LocalDateTime.now());
         subreddit.setMembersCount(subreddit.getMembersCount() - 1);
-        subredditMemberRepository.delete(targetMember);
+        subredditMemberRepository.save(targetMember);
     }
 
 
@@ -268,7 +273,7 @@ public class SubredditService {
     }
 
     private SubredditMember getCurrentMember(User user, Subreddit subreddit) {
-        return subredditMemberRepository.findByUserAndSubreddit(user, subreddit);
+        return subredditMemberRepository.findByUserAndSubredditAndLeavedAtIsNull(user, subreddit);
     }
 
 

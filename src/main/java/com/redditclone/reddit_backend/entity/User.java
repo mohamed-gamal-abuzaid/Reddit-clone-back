@@ -71,39 +71,4 @@ public class User implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_" + role.name()));
     }
-
-    @Override
-    public String getUsername() {
-        return email; // بنستخدم الـ email كـ username في الـ auth
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
-
-    // عشان تقدر تاخد الـ username الحقيقي بتاع اليوزر
-    public String getActualUsername() {
-        return username;
-    }
 }

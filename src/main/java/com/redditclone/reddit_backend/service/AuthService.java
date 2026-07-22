@@ -52,7 +52,7 @@ public class AuthService {
         return AuthResponse.builder()
                 .accessToken(accessToken)
                 .refreshToken(refreshToken)
-                .username(user.getActualUsername())
+                .username(user.getUsername())
                 .email(user.getEmail())
                 .build();
     }
@@ -74,7 +74,7 @@ public class AuthService {
         return AuthResponse.builder()
                 .accessToken(accessToken)
                 .refreshToken(refreshToken)
-                .username(user.getActualUsername())
+                .username(user.getUsername())
                 .email(user.getEmail())
                 .build();
     }
@@ -96,7 +96,7 @@ public class AuthService {
         return AuthResponse.builder()
                 .accessToken(newAccessToken)
                 .refreshToken(newRefreshToken)
-                .username(user.getActualUsername())
+                .username(user.getUsername())
                 .email(user.getEmail())
                 .build();
     }

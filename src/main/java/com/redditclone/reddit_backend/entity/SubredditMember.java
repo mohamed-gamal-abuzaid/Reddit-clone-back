@@ -39,6 +39,10 @@ public class SubredditMember {
     private LocalDateTime joinedAt;
 
 
+    @Column(name = "leaved_at")
+    private LocalDateTime leavedAt;
+
+
     private Boolean muted = false;
 
     private Boolean banned = false;
