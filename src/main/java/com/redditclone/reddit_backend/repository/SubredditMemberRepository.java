@@ -8,7 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface SubredditMemberRepository extends JpaRepository<SubredditMember, Long> {
-    SubredditMember findByUserAndSubreddit(User currentUser, Subreddit subreddit);
 
-    List<SubredditMember> findBySubreddit(Subreddit subreddit);
+    SubredditMember findByUserAndSubredditAndLeavedAtIsNull(User user, Subreddit subreddit);
+
+    List<SubredditMember> findBySubredditAndLeavedAtIsNull(Subreddit subreddit);
 }
