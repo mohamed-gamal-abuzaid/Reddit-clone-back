@@ -31,9 +31,12 @@ public class AuthController {
         return ResponseEntity.ok(authService.login(request));
     }
 
-    @Operation(summary = "Refresh access token")
-    @PostMapping("/refresh-token")
-    public ResponseEntity<AuthResponse> refreshToken(@RequestParam String refreshToken) {
-        return ResponseEntity.ok(authService.refreshToken(refreshToken));
+   @Operation(
+           summary = "Logout the current user",
+           description = "This endpoint invalidates the current user's session or token."
+   )
+    @PostMapping("/logout")
+    public ResponseEntity<Void> logout() {
+        return ResponseEntity.noContent().build();
     }
 }
